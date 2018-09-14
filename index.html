@@ -55,9 +55,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -73,10 +73,10 @@
             <a href="mailto:mparasar3@gatech.edu">Mayank Parasar</a>
           </div>
           <p align="justify" class="lead mb-5"><a href="img/profile1.jpg">Mayank Parasar</a> is a 4th year PhD student in the School of Electrical and Computer Engineering at Georgia Tech. He is the recipient of “Otto & Jenny Krauss Fellow” award at Georgia Tech. He is also the AMD student ambassador at Georgia Tech.
-          </p>
-          <p align="justify" class="lead mb-5">He received his Master's degree from the School of Electrical and Computer Engineering at Georgia Tech in 2017. Prior to that he received B.Tech in Instrumentation Engineering from Indian Institute of Technology (IIT) Kharagpur in 2013. Before joining Georgia Tech, Mayank worked at Nvidia for 2 years.
-          </p>
-          <p  align="justify" class="lead mb-5">He works in the field of Computer Architecture. His research objective is to provide breakthrough contributions in the field of NoC (Network on Chip)/ICN (Interconnection Networks), memory system and system software/application layer co-design.
+          <br><br>
+          He received his Master's degree from the School of Electrical and Computer Engineering at Georgia Tech in 2017. Prior to that he received B.Tech in Instrumentation Engineering from Indian Institute of Technology (IIT) Kharagpur in 2013. Before joining Georgia Tech, Mayank worked at Nvidia for 2 years.
+          <br><br>
+          He works in the field of Computer Architecture. His research objective is to provide breakthrough contributions in the field of NoC (Network on Chip)/ICN (Interconnection Networks), memory system and system software/application layer co-design.
           </p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/mayankparasar">
@@ -116,24 +116,24 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0"><a href="https://en.wikipedia.org/wiki/Georgia_Institute_of_Technology">Georgia Institute of Technology</a></h3>
-              <div class="subheading mb-3">Master of Science (M.S.)</div>
-              <div>Computer Engineering (College of Engineering)</div>
-              <p>GPA: 4.0/4.0</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2015 - May 2017</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0"><a href="https://en.wikipedia.org/wiki/Georgia_Institute_of_Technology">Georgia Institute of Technology</a></h3>
               <div class="subheading mb-3">Minor in Computer Science</div>
               <div>Computer Science (College of Computing)</div>
               <p>GPA: 4.0/4.0</p>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">August 2016 - May 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0"><a href="https://en.wikipedia.org/wiki/Georgia_Institute_of_Technology">Georgia Institute of Technology</a></h3>
+              <div class="subheading mb-3">Master of Science (M.S.)</div>
+              <div>Computer Engineering (College of Engineering)</div>
+              <p>GPA: 4.0/4.0</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2015 - May 2017</span>
             </div>
           </div>
 
@@ -165,12 +165,95 @@
           With upcoming many-core architectures (Many-Core CPUs, GPUs, Neural Networks) management of on-chip memory is becoming exceedingly crucial.</p>
 
           <h2 class="mb-5">Publications</h2>
+          <!-- Paper #5 -->
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Guaranteeing Deadlock Freedom in Arbitrary Network Topologies using Packet Swaps</h3>
+              <p align="left"><mark><u>Mayank Parasar</u></mark>,  Tushar Krishna <br>
+              <a href="https://www.microarch.org/micro51/SRC/">MICRO-SRC</a>; Oct 2018 </p>
+              <div class="subheading mb-3">[<a href="papers/micro_src.pdf">paper</a>] · [bibtex]</div>
+              <p align="justify">Interconnection networks are the communication backbone for any computing system. It allows exchange of messages/packets among different nodes of the system, be it an on-chip or an off-chip system. Different nodes could be a CPU-core, accelerators (such as GPUs, DNN-accelerator etc) or even a computer cluster connected with other different computer clusters, depending on what granularity we define ’node’. One of the most fundamental challenges in any interconnection network is that of routing deadlocks. A deadlock is a cyclic dependence between buffers that renders forward progress impossible.<br>
+              Deadlocks are necessary evil and almost every on-chip/HPC network today avoids it either via routing restrictions across physical channel (Dally’s theory) or with at least one escape virtual channel (Duato’s Theory). This makes the Channel Dependency Graph (CDG) acyclic thus making sure that a cyclic dependence between buffers is never created in the first place. However, the analysis of making CDG acyclic is tied closely to the underlying network topology, which makes it difficult to port off-the-shelve deadlock free routing algorithm to irregular topologies. Moreover, irregular topologies more likely to form dynamically during the runtime of the system even if we begin from a regular topology such as Mesh. This is due to the power gating and dynamic link failures. This can make the earlier deadlock-free routing to deadlock in the new topology which is dynamically formed. We study how often deadlock occur in a full system simulation on gem5 with garnet2.0 network model, with parsec benchmark [3] running on latest Linux kernel.<br>
+              Therefore, with cyclic-CDG it is not correct to ask, “if deadlock will occur?”, instead the right question is “when deadlock will occur?”</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <a href="img/micro_src.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/micro_src.png" alt=""></a>
+            </div>
+          </div>
+
+          <!-- Paper #4 -->
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Brownian Bubble Router: Enabling Deadlock Freedom via Guaranteed Forward Progress</h3>
+              <p align="left"><mark><u>Mayank Parasar</u></mark>, Ankit Sinha, Tushar Krishna <br>
+              <a href="https://www.nocs2018.conf.kth.se/">NOCS</a>; Oct 2018 </p>
+              <div class="subheading mb-3">[<a href="papers/brownianbubble_nocs2018.pdf">paper</a>] · [bibtex]</div>
+              <p align="justify">Deadlocks are a bane for network designers, be
+              it a Network on Chip (NoC) in a multi-core or a large scale
+              HPC/datacenter network. A routing deadlock occurs when there
+              is a cyclic dependence between the buffers of network routers.
+              Most modern systems avoid deadlocks by placing routing restrictions
+              or adding extra virtual channels, in turn hurting
+              performance and adding overhead respectively.<br>
+              In this work, we demonstrate that instead of placing such restrictions,
+              we can, in fact, design routers to themselves guarantee
+              deadlock-freedom, by (i) ensuring that every router always has at
+              least one bubble (i.e., free buffer slot) at any input port, and (ii)
+              this bubble pro-actively moves between input ports. We call this
+              a Brownian Bubble Router (BBR). A BBR guarantees forward
+              progress in any network topology, without requiring any routing
+              restrictions or additional virtual channels.<br>
+              With our BBR design we provide 4× better throughput
+              over state of art deadlock recovery schemes and 40% better
+              throughput over traditional deadlock avoidance schemes in a
+              8x8 Mesh at negligible area and power overheads</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <a href="img/bbr.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/bbr.png" alt=""></a>
+            </div>
+          </div>
+
+          <!-- Paper #3 -->
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">SEESAW: Using Superpages to Improve VIPT Caches</h3>
+              <p align="left"><mark><u>Mayank Parasar</u></mark>, Abhishek Bhattacharjee, Tushar Krishna <br>
+              <a href="http://iscaconf.org/isca2018/">ISCA</a>; Jun 2018 </p>
+              <div class="subheading mb-3">[<a href="papers/seesaw_isca2018.pdf">paper</a>] · [<a href="papers/seesaw.bib">bibtex</a>]</div>
+              <p align="justify">Hardware caches balance fast lookup, high hit rates, energy efficiency, and simplicity of implementation. For L1 caches however, achieving this balance is difficult because of constraints imposed by virtual memory. L1 caches are usually virtually-indexed and physically tagged (VIPT), but this means that they must be highly associative to achieve good capacity. Unfortunately, excessive associativity compromises performance by degrading access times without significantly boosting hit rates, and increases access energy.<br>
+              We propose SEESAW to overcome this problem. SEESAW leverages the increasing ubiquity of superpages1 – since super- pages have more page offset bits, they can accommodate VIPT caches with more sets than what is traditionally possible with only base page sizes. SEESAW dynamically reduces the number of ways that are looked up based on the page size, improving performance and energy. SEESAW requires modest hardware and no OS or application changes.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <a href="img/seesaw.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/seesaw.png" alt=""></a>
+            </div>
+          </div>
+
+          <!-- Paper #2 -->
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Lightweight Emulation of Virtual Channels using Swaps</h3>
+              <p align="left"><mark><u>Mayank Parasar</u></mark>, Tushar Krishna <br>
+              <a href="http://www.diit.unict.it/users/mpalesi/nocarc/nocarc17/">NoCArc</a>; Oct 2017 </p>
+              <div class="subheading mb-3">[<a href="papers/swapnoc_nocarc2017.pdf">paper</a>] · [<a href="papers/swapnoc.bib">bibtex</a>]</div>
+              <p align="justify">Virtual Channels (VCs) are a fundamental design feature across networks, both on-chip and off-chip. They provide two key benefits - deadlock avoidance and head-of-line (HoL) blocking mitigation. However, VCs increase the router critical path, and add significant area and power overheads compared to simple wormhole routers. This is especially challenging in the era of energy-constrained many-core chips.
+              <br>
+              The number of VCs required for deadlock avoidance is unavoidable, but those required for mitigating HoL depend on runtime factors such as the distribution and size of single and multi-flit packets, and their intended destinations. In some cases more VCs are beneficial, while in others they may actually harm performance, as we demonstrate. In this work, we provide a low-cost micro- architectural technique to emulate the HoL mitigation behavior of VCs inside routers, without requiring the expensive data path or control path (vc state and vc allocation) for VCs. We augment wormhole routers with the ability to do an in-place swap of blocked packets to the head of the queue. Our design (SwapNoC) can oper- ate at low area and power specs like wormhole designs, without incurring their HoL challenges.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <!-- <span class="text-primary">March 2013 - Present</span> -->
+              <!-- <img src="img/swapnoc.png" alt="" style="width:350px;height:150px;"> -->
+              <a href="img/swapnoc.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/swapnoc.png" alt=""></a>
+            </div>
+          </div>
+
+          <!-- Paper #1 -->
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">VESPA: VIPT Enhancements for Superpage Accesses</h3>
-              <p align="left"><mark><u>Mayank Parasar</u></mark>, Abhishek Bhattacharjee, Tushar Krishna </p>
-              <p align="left"> Arxiv Preprint; Jan 2017 </p>
-              <div class="subheading mb-3">[<a href="https://arxiv.org/pdf/1701.03499.pdf">paper</a>] · [<a href="papers/ParasarBK17.bib">bibtex</a>]</div><p align="justify">L1 caches are critical to the performance of modern
+              <p align="left"><mark><u>Mayank Parasar</u></mark>, Abhishek Bhattacharjee, Tushar Krishna <br>
+              Arxiv Preprint; Jan 2017 </p>
+              <div class="subheading mb-3">[<a href="https://arxiv.org/pdf/1701.03499.pdf">paper</a>] · [<a href="papers/ParasarBK17.bib">bibtex</a>]</div>
+              <p align="justify">L1 caches are critical to the performance of modern
               computer systems. Their design involves a delicate balance
               between fast lookups, high hit rates, low access energy, and
               simplicity of implementation. Unfortunately, constraints imposed
@@ -180,8 +263,8 @@
               lookups means that L1 caches are usually grown with greater
               associativity rather than sets. This compromises performance
               – by degrading access times without significantly boosting hit
-              rates – and increases access energy.</p>
-              <p align="justify">We propose VIPT Enhancements for SuperPage Accesses or
+              rates – and increases access energy.<br>
+              We propose VIPT Enhancements for SuperPage Accesses or
               VESPA in response. VESPA side-steps the traditional problems
               of VIPT by leveraging the increasing ubiquity of superpages.
               since superpages have more page offset bits, they can accommodate
@@ -198,60 +281,7 @@
               <a href="img/vespa.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/vespa.png" alt=""></a>
             </div>
           </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Lightweight Emulation of Virtual Channels using Swaps</h3>
-              <p align="left"><mark><u>Mayank Parasar</u></mark>, Tushar Krishna </p>
-              <div class="subheading mb-3">[<a href="papers/swapnoc_nocarc2017.pdf">paper</a>] · [<a href="papers/swapnoc.bib">bibtex</a>]</div><p align="justify">Virtual Channels (VCs) are a fundamental design feature across networks, both on-chip and off-chip. They provide two key benefits - deadlock avoidance and head-of-line (HoL) blocking mitigation. However, VCs increase the router critical path, and add significant area and power overheads compared to simple wormhole routers. This is especially challenging in the era of energy-constrained many-core chips.
-              </p>
-              <p align="justify">The number of VCs required for deadlock avoidance is unavoidable, but those required for mitigating HoL depend on runtime factors such as the distribution and size of single and multi-flit packets, and their intended destinations. In some cases more VCs are beneficial, while in others they may actually harm performance, as we demonstrate. In this work, we provide a low-cost micro- architectural technique to emulate the HoL mitigation behavior of VCs inside routers, without requiring the expensive data path or control path (vc state and vc allocation) for VCs. We augment wormhole routers with the ability to do an in-place swap of blocked packets to the head of the queue. Our design (SwapNoC) can oper- ate at low area and power specs like wormhole designs, without incurring their HoL challenges.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <!-- <span class="text-primary">March 2013 - Present</span> -->
-              <!-- <img src="img/swapnoc.png" alt="" style="width:350px;height:150px;"> -->
-              <a href="img/swapnoc.png"><img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/swapnoc.png" alt=""></a>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">December 2011 - March 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Junior Web Designer</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2010 - December 2011</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Design Intern</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2008 - June 2010</span>
-            </div>
-          </div>
-
-        </div>
-
       </section>
-
-
 
       <hr class="m-0">
 
@@ -261,113 +291,59 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+              <h3 class="mb-0">Co-Op Engineer, AMD Research</h3>
+              <div class="subheading mb-3">AMD</div>
+              <p align="left"> Aug 2017 – Dec 2017 · 4 mons<br>
+              Austin, Texas Area</p>
+              <p> Worked on optimizing virtual address translation using gem5 simulator </p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">March 2013 - Present</span>
+              <!-- <span class="text-primary">March 2013 - Present</span> -->
+              <img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/amd_logo.png" alt="">
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+              <h3 class="mb-0">CPU Validation Engineer II</h3>
+              <div class="subheading mb-3">NVIDIA Corporation</div>
+              <p align="left"> Oct 2014 – Jun 2015 · 9 mons<br>
+              Bengaluru Area, India</p>
+              <p> Worked on development of trace driven Instruction-set Simulator for ARM CPU written in C with QEMU infra.</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">December 2011 - March 2013</span>
+              <!-- <span class="text-primary">March 2013 - Present</span> -->
+              <img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/nvidia_logo.webp" alt="">
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Junior Web Designer</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+              <h3 class="mb-0">CPU Validation Engineer I</h3>
+              <div class="subheading mb-3">NVIDIA Corporation</div>
+              <p align="left"> Aug 2013 – Oct 2014 · 1yr 3 mons<br>
+              Bengaluru Area, India</p>
+              <p> Worked on Post-Silicon validation of the Denver-CPU by Nvidia.</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">July 2010 - December 2011</span>
+              <!-- <span class="text-primary">March 2013 - Present</span> -->
+              <img class="img-fluid img-profile rounded mx-auto mb-auto" src="img/nvidia_logo.webp" alt="">
             </div>
           </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Design Intern</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2008 - June 2010</span>
-            </div>
-          </div>
-
-        </div>
 
       </section>
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+      <section class="resume-section p-2 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
           <h2 class="mb-5">Skills</h2>
 
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-angular"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-react"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-node-js"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-sass"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-less"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-wordpress"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-gulp"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-grunt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-npm"></i>
-            </li>
-          </ul>
+          <div class="subheading mb-3">Computer Architecture Simulators</div>
+          <div class="mb-1">gem5, Garnet, USIMM</div>
 
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
+          <div class="subheading mb-3">Programming/Scripting Lanuguages</div>
+          <div class="mb-1">C, C++, Python, Verilog, Matlab/Octave, CUDA C++, bash, tcsh</div>
         </div>
       </section>
 
@@ -376,14 +352,18 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+          <p class="mb-0">Apart from being academic researcher. I enjoy coding, learning new programming languages, watching documentaries on world history and quantum physics.<br>
+          I am interested in photography and exploring different tourist places around the world which are close to nature. I am vegetarian and like trying different cuisines from around the world.<br>
+          I believe in healthy lifestyle and enjoy outdoor activities such as jogging and kayaking!</p>
+
+<!--           <p>Apart from being a academic researcher, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p> -->
         </div>
       </section>
 
       <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+<!--       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
         <div class="my-auto">
           <h2 class="mb-5">Awards &amp; Certifications</h2>
           <ul class="fa-ul mb-0">
@@ -415,7 +395,7 @@
               Place - James Buchanan High School - Hackathon 2005</li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
     </div>
 
